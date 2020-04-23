@@ -317,7 +317,9 @@ class hawkController:
                         print(e)
 
         def start_config_clicked(arg):
-                os.sys('Config_controller.py')
+                import Config_controller
+                if get_prev_value() or get_next_value() or get_set_conf_value() or get_add_pt_value() or get_done_value():
+                 changed_values(ssh_client)
 
                 
 
